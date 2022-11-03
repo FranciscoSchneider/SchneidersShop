@@ -57,7 +57,7 @@ Serilog.ILogger CreateSerilogLogger(IConfiguration configuration)
         .WriteTo.Async(x => x.File(@"Logs\application_log.log", rollingInterval: RollingInterval.Day))
         .CreateLogger();
 
-public class Program
+public partial class Program
 {
 
     public static string Namespace = typeof(Startup).Namespace;
